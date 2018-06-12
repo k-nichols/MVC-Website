@@ -1,0 +1,156 @@
+﻿@{
+    ViewBag.Title = "Current Developments";
+}
+
+<style type="text/css">
+    .text-overlay {
+        display: none;
+        position: absolute;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: x-large;
+        text-align: center;
+        left: 0;
+        top: calc(50% - 33px);
+        width: 100%;
+        z-index: 100;
+    }
+
+    .img-coming-soon img {
+        position: relative;
+        opacity: 0.8;
+        -o-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+        .img-coming-soon:hover img {
+            opacity: 1;
+            -o-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+    .circle-clickable {
+        position: relative;
+        width: 200px;
+    }
+
+        .circle-clickable img {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            opacity: 1.0;
+            -o-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .circle-clickable:hover img {
+            opacity: 0.4;
+            -o-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .circle-clickable:hover .text-overlay {
+            display: block;
+        }
+
+    .text-block {
+        color: #333333;
+        background-color: #f5f5f5; /*f2*/
+        border-radius: 100px;
+    }
+
+        .text-block p {
+            float: right;
+            width: 80%;
+            line-height: 1.75;
+        }
+
+        .text-block a {
+            color: #2779be;
+            text-decoration: underline;
+        }
+
+            .text-block a:hover {
+                color: #135e9d;
+                text-decoration: none;
+            }
+</style>
+
+<h2>@ViewBag.Title.</h2>
+<hr /><br />
+<div id="developments-list">
+    <div id="fieldmak" class="text-block">
+        <p>
+            <br />
+            <font size="+2">
+                <a href="" target="blank">
+                    FieldMAK
+                </a>
+            </font><br />
+            <font size="+0">
+                The FieldMAK is a field-ready, modular testing kit with cloud storage capabilities.
+                <br />
+                Uses range from science and education to law inforcement and military use.
+            </font>
+            <br /><br />
+            <a class="btn btn-default" style="text-decoration:none; color:#333333" href="http://www.aegorsuchdesigns.com/fieldmak/">Learn more &raquo;</a>
+        </p>
+        <div class="circle-clickable">
+            <img src="~/Images/fieldmak.png" id="img_MAK" alt="FieldMAK testing kit" />
+            <h2 class="text-overlay">Click to view</h2>
+        </div>
+    </div>
+    <br />
+    <div id="resonance-treatment" class="text-block">
+        <p>
+            <br />
+            <font size="+2">
+                <a href="" target="blank">
+                    Cystic Fibrosis Resonance Treatment
+                </a>
+            </font><br />
+            <font size="+0">
+                A redesign of percussive mucus-clearing technology for patients with cystic fibrosis.
+                <br />
+                This technology is less intrusive and more energy efficient than ever.
+            </font>
+            <br /><br />
+            <a class="btn btn-default" style="text-decoration:none; color:#333333" href="http://www.aegorsuchdesigns.com/cystic-fibrosis-resonance-treatment/">Learn more &raquo;</a>
+        </p>
+        <div class="img-coming-soon">
+            <img src="~/Images/coming-soon.png" id="img_gscal" alt="Gauge Scalpel" />
+            <h2 class="text-overlay">Click to view</h2>
+        </div>
+    </div>
+    <br />
+    <div id="gauge-scalpel" class="text-block">
+        <p>
+            <br />
+            <font size="+2">
+                <a href="" target="blank">
+                    Gauge Scalpel
+                </a>
+            </font><br />
+            <font size="+0">
+                This simple, yet revolutionary depth-cognizant scalpel is both durable and affordable.
+                <br />
+                Other features include: a 3-D printable handle and universal measurement.
+            </font>
+            <br /><br />
+            <a class="btn btn-default" style="text-decoration:none; color:#333333" href="http://www.aegorsuchdesigns.com/gaugescalpel/">Learn more &raquo;</a>
+        </p>
+        <div class="circle-clickable">
+            <img src="~/Images/gauge-scalpel.png" id="img_gscal" alt="Gauge Scalpel" />
+            <h2 class="text-overlay">Click to view</h2>
+        </div>
+    </div>
+</div>

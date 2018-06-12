@@ -1,0 +1,54 @@
+﻿@model TestProject.Models.SubscribeViewModel
+@{
+    ViewBag.Title = "Subscribe";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subscribe</title>
+        <script type="text/javascript" src="~/Scripts/jquery/version/jquery-1.12.3.js"></script>
+        <script type="text/javascript" src="~/Scripts/jquery/jquerysubscribe.js"></script>
+
+        <!--CSS Code, will be moved later-->
+        <style type="text/css">
+            .indented {
+                text-indent: 90px;
+            }
+            .error-msg {
+                font-size: 85%;
+                color: #b94a48;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Subscribe for updates.</h2>
+        <h4>Stay up-to-date on our latest projects.</h4>
+        <hr />
+        <div id="subscriptionForm">
+            <div id="data-input">
+                <div class="form-group">
+                    <label for="Email">&emsp; Email &emsp;&emsp;</label>
+                    <input id="Email" type="text" placeholder="name@example.com" required />
+                    <p id="ErrMessage" class="indented error-msg"></p>
+                </div>
+                <div class="form-group">
+                    <label for="FirstName">First name &emsp;</label>
+                    <input id="FirstName" type="text" placeholder="Jane" />
+                </div>
+                <div class="form-group">
+                    <label for="LastName">Last name &emsp;</label>
+                    <input id="LastName" type="text" placeholder="Doe" />
+                </div>
+                <div id="submit" class="indented">
+                    <button id="SubscribeButton" type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div id="ViewSubscribersButton">
+            <p><a href="~/Form/ViewSubscribers" class="btn btn-lg">View Subscribers &raquo;</a></p>
+        </div>
+    </body>
+</html>

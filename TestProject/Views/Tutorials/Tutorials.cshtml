@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Tutorials";
+}
+<head>
+    <link href="http://vjs.zencdn.net/6.2.7/video-js.css" rel="stylesheet">
+    <!-- If you'd like to support IE8 -->
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+    <script src="~/Scripts/videojs/video.js"></script>
+    <link href="~/Content/videojs/videojs.css" rel="stylesheet">
+</head>
+<body>
+    <h2>@ViewBag.Title.</h2>
+    <hr /><br />
+    <div>
+        <video id="my-video" class="video-js vjs-skin-custom" controls preload="auto" width="568" height="320"
+               poster="~/Images/BBB.png" data-setup="{}">
+            <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type='video/mp4'>
+            <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.webm" type='video/webm'>
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
+        <br />
+        <video id="my-recorder" class="" width="568" height="320"></video>
+
+        <script src="http://vjs.zencdn.net/6.2.7/video.js"></script>
+    </div>
+</body>

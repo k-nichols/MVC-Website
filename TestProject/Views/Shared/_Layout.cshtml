@@ -1,0 +1,187 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - AEGorsuchDesigns</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!--CSS Code, will be moved later-->
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+        body {
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 355px;
+        }
+        .footer-column1 {
+            margin-left: 150px;
+            line-height: 160%;
+            width: 45%;
+            float: left;
+            display: inline;
+        }
+        .footer-column2 {
+            margin-right: 150px;
+            line-height: 160%;
+            width: 45%;
+            float: left;
+            display: inline;
+        }
+        .footer {
+            position: absolute;
+            margin-top: auto;
+            padding-top: 15px;
+            padding-bottom: 30px;
+            width: 100%;
+            height: 300px;
+            bottom: 0;
+            background-color: #505050;
+        }
+        .footer #footer-title {
+            font-size: medium;
+            font-weight: bold;
+            color: #F0F0F0;
+        }
+        .footer #footer-text {
+            color: #999999;
+        }
+            
+        /*social-icons {
+            float: right;
+            color: #FFFFFF;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            background: transparent;
+            -webkit-font-smoothing: antialiased;
+        }
+        .social-icons li {
+            vertical-align: top;
+            display: inline;
+            height: 100px;
+        }
+        .social-icons a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .fa-facebook {
+            padding:10px 14px;
+            -o-transition:.5s;
+            -moz-transition:.5s;
+            -webkit-transition:.5s;
+            transition: .5s;
+            background: transparent;
+        }
+        .fa-facebook:hover {
+            background-color: #3d5b99;
+            border-radius: 50%;
+        }*/
+
+        .sub-footer {
+            position: absolute;
+            margin-top: auto;
+            padding: 20px;
+            width: 100%;
+            height: 55px;
+            bottom: 0;
+            background-color: #222222;
+        }
+        .sub-footer #copyright {
+            font-size: smaller;
+            color: #606060;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("AEGorsuchDesigns", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Current Developments", "CurrentDevelopments", "CurrentDevelopments")</li>
+                    <li>@Html.ActionLink("Products", "Products", "Products")</li>
+                    <li>@Html.ActionLink("Tutorials", "Tutorials", "Tutorials")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <br /><br />
+                    <div id="footer-title">
+                        <p>Our Mission</p>
+                    </div>
+                    <div id="footer-text">
+                        <p>AEGorsuchDesigns is a team of innovators, lead by founder Alex Gorsuch. We work behind the scenes every day to update scientific inquiry. Whether you are a farmer, medical professional, researcher, etc. we are here to serve you and your work. We believe in solving problems with ingenuity, building a community of citizen-scientists, <br />and making research more accessible to all. We are here to blaze a trail.</p>
+                    </div>
+                    <br />
+                </div>
+                <div class="col-md-6">
+                    <div id="footer-title">
+                        <br /><br />
+                        <p>Contact</p>
+                    </div>
+                    <div id="footer-text">
+                        <p>
+                            (217) 417-4173<br />
+                            aegorsuchdesigns@gmail.com
+                        </p>
+                        <p>
+                            <img src="~/Images/home-sm.png" id="img_location" align="left" style="opacity:0.5;" />
+                            &emsp;3655 Research Rd.<br />
+                            &emsp;Genesis Building B, Room 108<br />
+                            &emsp;Las Cruces, NM 88003
+                        </p>
+                    </div>
+                </div>
+                <!--<div class="col-md-6">
+                    <br /><br />
+                    <div id="footer-title">
+                        <p>Follow Us</p>
+                    </div>
+                    <ul class="social-icons">
+                        <li class="fa fa-facebook">
+                            <a href="https://www.facebook.com/AEGorsuchDesigns/" class="" target="_blank" alt="Follow us on Facebook"></a>
+                        </li>
+                        <li class="twitter">
+                            <a href="https://twitter.com/AegorsuchD" class="" target="_blank" alt="Follow us on Twitter"></a>
+                        </li>
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/in/AEGorsuchDesigns" class"" target="_blank" alt="Check out our LinkedIn"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>-->
+        </div>
+    </footer>
+    <footer class="sub-footer">
+        <div class="container" id="copyright">
+            <p>
+                @@ @DateTime.Now.Year AEGorsuchDesigns. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

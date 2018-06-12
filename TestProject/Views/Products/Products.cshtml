@@ -1,0 +1,115 @@
+﻿@{
+    ViewBag.Title = "Products";
+}
+
+<style type="text/css">
+    .text-overlay {
+        display: none;
+        position: absolute;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: x-large;
+        text-align: center;
+        left: 0;
+        top: calc(50% - 33px);
+        width: 100%;
+        z-index: 100;
+    }
+
+    .circle-clickable {
+        position: relative;
+        width: 200px;
+    }
+
+        .circle-clickable img {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            opacity: 1.0;
+            -o-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .circle-clickable:hover img {
+            opacity: 0.4;
+            -o-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .circle-clickable:hover .text-overlay {
+            display: block;
+        }
+
+    .text-block {
+        color: #333333;
+        background-color: #f5f5f5; /*f2*/
+        border-radius: 100px;
+    }
+
+        .text-block p {
+            float: right;
+            width: 80%;
+            line-height: 1.75;
+        }
+        .text-block a {
+            color: #03878B;
+            text-decoration: underline;
+        }
+        .text-block a:hover {
+            color: #015D71;
+            text-decoration: none;
+        }
+</style>
+
+<h2>@ViewBag.Title.</h2>
+<hr /><br />
+<div id="product-list">
+    <div id="neural-kit" class="text-block">
+        <p>
+            <br />
+            <font size="+2">
+                <a href="" target="blank">
+                    Neural Networking Starter Kit
+                </a>
+            </font><br />
+            <font size="+0">
+                This low-cost, customizable starter kit is a great place to start for your Artificial Neural Network.
+                <br />
+                Other features include: scalability, optimized network capabilities, and long term support.
+            </font>
+            <br /><br />
+            <a class="btn btn-default" style="text-decoration:none; color:#333333" href="http://www.aegorsuchdesigns.com/microbiological-assay-kit/">Learn more &raquo;</a>
+        </p>
+        <div class="circle-clickable">
+            <img src="~/Images/neural-net-starter.png" id="img_nkit" alt="Neural Networking Starter Kit" />
+            <h2 class="text-overlay">Click to view</h2>
+        </div>
+    </div>
+    <br />
+    <div id="mining-rig" class="text-block">
+        <p>
+            <br />
+            <font size="+2">
+                <a href="" target="blank">
+                    Cryptocurrency Mining Rig
+                </a>
+            </font><br />
+            <font size="+0">
+                Looking to enter into cryptocurrency mining or expand your current system? Our rigs are now available for purchase.
+                <br />
+                We offer flexible pricing plans, modular GPU arrays, and optimzed performance and reliability.
+            </font>
+            <br /><br />
+            <a class="btn btn-default" style="text-decoration:none; color:#333333" href="http://www.aegorsuchdesigns.com/microbiological-assay-kit/">Learn more &raquo;</a>
+        </p>
+        <div class="circle-clickable">
+            <img src="~/Images/mining-rig.png" id="img_mrig" alt="Cryptocurrency Mining Rig" />
+            <h2 class="text-overlay">Click to view</h2>
+        </div>
+    </div>
+</div>

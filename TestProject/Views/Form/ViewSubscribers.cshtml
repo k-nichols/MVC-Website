@@ -1,0 +1,29 @@
+﻿@model TestProject.Models.SubscribeViewModel
+@{
+    ViewBag.Title = "Subscribers";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="~/Scripts/jquery/version/jquery-1.12.3.js"></script>
+    <script type="text/javascript" src="~/Scripts/devextreme/globalize.js"></script>
+    <script type="text/javascript" src="~/Scripts/devextreme/dx.webappjs.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery/jquerydatagrid.js"></script>
+
+    <link rel="stylesheet" href="~/Content/devextreme/dx.common.css">
+    <link rel="stylesheet" href="~/Content/devextreme/dx.light.compact.css">
+</head>
+<body class="dx-viewport">
+    <div class="demo-container">
+        <div id="container">
+            <br />
+            <h3>Current Subscribers:</h3>
+            <h5>You may select, filter, edit, and delete subscribers here.</h5>
+            
+            <div id="loadPanel"></div>
+            <div id="dataGrid"></div>
+        </div>
+    </div>
+</body>
+</html>

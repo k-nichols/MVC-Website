@@ -1,0 +1,48 @@
+﻿@model TestProject.Models.ContactInfo
+@{
+    ViewBag.Title = "Contact";
+}
+<!--CSS Code, will be moved later-->
+<head>
+    <style type="text/css">
+        .indent10 {
+            text-indent: 10px;
+        }
+        .indent25 {
+            text-indent: 25px;
+            padding-top: 6px;
+            font-size: 11px;
+        }
+        .roundedTextBox {
+            border-radius: 15px 50px;
+            border: 2px solid #E8E8E8;
+            padding: 20px; 
+            width: 340px;
+            height: 100px; 
+        }
+    </style>
+</head>
+
+<h2>Contact Information.</h2>
+<hr />
+<div class="indent10">
+    <h4>(217) 417-4173</h4>
+    <h4><a href="mailto:Support@example.com">aegorsuchdesigns@gmail.com</a></h4>
+
+    <h3>Address</h3>
+</div>
+
+<div class="roundedTextBox">
+    <address>
+        <img src="~/Images/home.png" id="img_location" align="left" />
+        &emsp; 3655 Research Rd.<br />
+        &emsp; Genesis Building B, Room 108<br />
+        &emsp; Las Cruces, NM 88003<br />
+        <!--<abbr title="Phone">P:</abbr>
+        425.555.0100-->
+    </address>
+</div>
+
+<div id="hours" class="indent25">
+    Located next to NMSU's Arrowhead Center, open 8AM-5PM
+</div>
